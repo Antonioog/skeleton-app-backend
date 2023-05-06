@@ -7,14 +7,14 @@ const Users = db.define('users', {
         type: DataTypes.UUID,
         primaryKey: true
     },
-    firstName: {
+    first_name: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
             len: [3, 255]
         }
     },
-    lastName: {
+    last_name: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {

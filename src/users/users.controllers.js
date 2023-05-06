@@ -32,8 +32,8 @@ const createUser = async (userObj) => {
   const newUser = await Users.create({
     id: uuid.v4(),
 
-    firstName: userObj.firstName,
-    lastName: userObj.lastName,
+    first_name: userObj.first_name,
+    last_name: userObj.last_name,
     email: userObj.email,
     password: hashPassword(userObj.password),
     birthday: userObj.birthday,
