@@ -27,7 +27,11 @@ app.use(cors())
 
 const loggerMiddleware = (req, res, next) => {
     console.log(`${req.method} | ${req.path}`)
-    next()
+    if(req.method !== 'DELETE'){
+        next()
+        return
+    }
+    res.status(400).json({message: 'Ey, no hagas delete....'})
 }
 
 app.use(loggerMiddleware)
