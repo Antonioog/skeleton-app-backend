@@ -7,7 +7,10 @@ const checkUserCredentials = async (email, password) => {
 
     const validatePassword = comparePassword(password, user.password)
     
-    return validatePassword ? user : false
+    if(!validatePassword){
+        return false
+    }
+    return user
 
 }
 

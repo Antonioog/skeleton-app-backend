@@ -3,10 +3,11 @@ const cors = require('cors')
 require('dotenv').config()
 
 const userRouter = require('./users/users.router')
+const authRouter = require('./auth/auth.router')
 const db = require('./utils/database')
 //const initModels = require('./models/initModels')
 
-const authRouter = require('./auth/auth.router')
+
 
 const app = express()
 
