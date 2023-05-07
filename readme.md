@@ -15,4 +15,7 @@ MVC.
     -busqueda por email encontramos toda la info del usuario
     -id, password encriptado y role
     -validar si el password es correcto
+    
+
+-middelwares
         

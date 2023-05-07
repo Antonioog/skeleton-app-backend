@@ -25,6 +25,13 @@ db.sync()
 app.use(express.json())
 app.use(cors())
 
+const loggerMiddleware = (req, res, next) => {
+    console.log(`${req.method} | ${req.path}`)
+    next()
+}
+
+app.use(loggerMiddleware)
+
 
 app.get('/', (req, res) => {
     res.status(200).json({message: 'Server OK.'})

@@ -1,6 +1,5 @@
 const userControllers = require("./users.controllers");
 
-
 //! const { findAllUsers, findUserById, createUser, updateUser } = require('./users.controllers')
 
 const getAllUsers = (req, res) => {
