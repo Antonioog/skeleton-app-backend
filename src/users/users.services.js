@@ -6,7 +6,7 @@ const getAllUsers = (req, res) => {
   userControllers
     .findAllUsers()
     .then((data) => {
-      res.status(200).json(data);
+      res.status(200).json({message: `El usuario ${req.user.first_name} hizo esta peticion`,data});
     })
     .catch((err) => {
       res.status(400).json({ message: "Bad request", err });
@@ -84,9 +84,15 @@ const deleteUser = (req, res) => {
     });
 };
 
+const getMyUser = (req, res) => {
+    const user = req.user
+    res.status(200).json(user)
+}
+
 module.exports = {
   getAllUsers,
   getUserById,
+  getMyUser,
   postNewUser,
   patchUser,
   deleteUser,
